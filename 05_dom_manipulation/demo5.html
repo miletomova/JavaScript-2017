@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Append Kids</title>
+</head>
+<body>
+	<div>
+		Parent with No Kids
+	</div>
+
+	<script type="text/javascript">
+		var nodes = document.getElementsByTagName('div')[0]
+					.childNodes, firstKid, secKid;
+
+					// console.log(nodes);
+
+					firstKid = document.createElement('p');
+					firstKid.textContent = 'I am the First';
+
+								console.log(firstKid);
+					secKid = document.createElement('p');
+					secKid.textContent = 'I am the Second';
+
+					document.getElementsByTagName('div')[0]
+							.appendChild(firstKid);
+					// document.getElementsByTagName('div')[0]
+					// 		.appendChild(secKid);
+							
+					// parentNode.insertBefore(newNode, referenceNode)
+
+					document.getElementsByTagName('div')[0]
+							.insertBefore(firstKid, nodes[0]);
+					// //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! InsertAfter
+					// document.getElementsByTagName('div')[0]
+					// 		.insertBefore(secKid, nodes[0].nextSibling);
+					document.getElementsByTagName('div')[0]
+							.insertBefore(secKid, nodes[1].nextSibling);
+	</script>
+</body>
+</html>

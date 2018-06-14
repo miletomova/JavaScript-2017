@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nodes</title>
+</head>
+<body>
+	<div>
+		Parent
+		<p>Kid 1</p>
+		<p>Kid 2</p>
+	</div>
+	<script>
+		var parent, kids;
+
+		parent = document.getElementsByTagName('div')[0];
+		kids   = parent.childNodes;
+		console.log(kids);
+
+		console.log(document.getElementsByTagName('p')[0].parentNode);
+
+		// console.log(document.getElementsByTagName('p')[1].previousSibling.innerHTML);
+
+
+	</script>
+</body>
+</html>

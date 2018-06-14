@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 04</title>
+</head>
+<body>
+	<div id="task">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<script type="text/javascript">
+		var elId = 'task', 
+					divContent =[	
+								'content1',
+								'content2',
+								'content3'
+								], 
+					targetEl, elDiv, len, i;
+		//1
+		targetEl = document.getElementById(elId);
+		//2
+		targetEl.innerHTML = '';
+		//3
+		len = divContent.length;
+		//4
+		for(i = 0; i < len; i++){
+			elDiv = document.createElement('div');
+			elDiv.innerText = divContent[i];
+			targetEl.appendChild(elDiv);
+			// console.log(elDiv);
+		}
+
+
+
+	</script>
+</body>
+</html>

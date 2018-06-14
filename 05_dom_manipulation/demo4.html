@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Create elements</title>
+</head>
+<body>
+	<div>
+		Parent Only
+	</div>
+	<script type="text/javascript">
+		var pEl = document.createElement('p');
+			pEl.className = 'kid';
+
+			// console.log(pEl);
+			document.getElementsByTagName('div')[0]
+					.appendChild(pEl);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM Relatives</title>
+</head>
+<body>
+	<div>
+		Parent
+		<p>Kid 1</p>
+		<p>Kid 2</p>
+	</div>
+	<script type="text/javascript">
+		document.getElementsByTagName('p')[1]
+				.style.background = '#BD44FB';
+		console.log(document.getElementsByTagName('p')[1]
+						.parentElement
+						.innerHTML);
+		console.log(document.getElementsByTagName('div')[0]
+						.children
+						.length);
+		var children = document.getElementsByTagName('div')[0].children;
+		children[0].style.background = '#FEE723';						
+	</script>
+</body>
+</html>
