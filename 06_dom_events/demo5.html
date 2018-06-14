@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prevent Default + A Little Validation :)</title>
+</head>
+<body>	
+	<form id="myform">
+		Name: <input id="name" type="text" value="" />
+		Email: <input id="email" type="text" value="" />
+		<p>
+			<button type="submit">type=submit</button>
+			<button type="button" onclick="form.submit()">form.submit()</button>
+		</p>
+	</form>
+	<script type="text/javascript">
+		
+		var form = document.getElementById('myform');
+		function onSubmit(event) {
+			if (event) { event.preventDefault(); 
+				var name = document.getElementById('name').value;
+				if(!name){
+					alert('enter name');
+					return false;
+				}
+			}
+    			// do AJAX stuff...
+    			console.log('submitted');
+			}
+		form.addEventListener('submit', onSubmit, false);
+		form.submit = onSubmit;
+</script>
+</body>
+</html>

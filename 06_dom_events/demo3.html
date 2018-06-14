@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Event Listener</title>
+</head>
+<body>
+	<button id="btn">
+		CLICK ME
+	</button>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		
+		btn.addEventListener("click", function (e) {
+			console.log(e);
+			console.log(e.target);
+  			alert("You clicked me!!!");
+			}, false);
+	
+	//Another syntax - more complex functionallity
+	var btn = document.getElementById("btn");
+		btn.addEventListener("click", clickButton(), false);
+
+		function clickButton(e){
+			console.log(e);
+			console.log(e.target);
+  			alert("You clicked me!!!");
+			}
+	</script>
+</body>
+</html>

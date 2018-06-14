@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bubbling &amp; Capturing</title>
+	<style type="text/css">
+		p {
+    		line-height: 0;
+		}
+
+		div {
+		    display:inline-block;
+		    padding: 5px;		
+		    background: #fff;
+		    border: 1px solid #aaa;
+		    cursor: pointer;
+		}
+		
+		div:hover {
+		    border: 1px solid #faa;
+		    background: #fdd;
+		}
+	</style>
+</head>
+<body>
+	<div>1
+    <div>2
+        <div>3
+            <div>4
+                <div>5</div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="log"></section>
+	<script type="text/javascript">
+		var logElement = document.getElementById('log');
+
+		function log(msg) {
+		    logElement.innerHTML += ('<p>' + msg + '</p>');
+		}
+
+		function capture() {
+		    log('capture: ' + this.firstChild.nodeValue.trim());
+		}
+		
+		function bubble() {
+		    log('bubble: ' + this.firstChild.nodeValue.trim());
+		}
+
+		var divs = document.getElementsByTagName('div');
+		//displays the direction of event execution
+		for (var i = 0; i < divs.length; i++) {
+		    divs[i].addEventListener('click', capture, true);
+		    divs[i].addEventListener('click', bubble, false);
+		}
+
+		// divs[0].addEventListener('click', capture, true);
+		// divs[4].addEventListener('click', bubble, false);
+
+		// divs[4].addEventListener('click', capture, true);
+		// divs[0].addEventListener('click', bubble, false);
+
+	</script>
+</body>
+</html>
