@@ -9,23 +9,21 @@
 		Name: <input id="name" type="text" value="" />
 		Email: <input id="email" type="text" value="" />
 		<p>
-			<button type="submit">type=submit</button>
-			<button type="button" onclick="form.submit()">form.submit()</button>
+			<button type="submit">type=submit</button>			
 		</p>
 	</form>
 	<script type="text/javascript">
 		
 		var form = document.getElementById('myform');
-		function onSubmit(event) {
-			if (event) { event.preventDefault(); 
+		function onSubmit(event) {			
+				event.preventDefault(); 
 				var name = document.getElementById('name').value;
 				if(!name){
-					alert('enter name');
-					return false;
-				}
-			}
-    			// do AJAX stuff...
-    			console.log('submitted');
+					console.log('enter name');					
+				} else {
+					console.log('submitted');
+					//Ajax call ...
+				}    			
 			}
 		form.addEventListener('submit', onSubmit, false);
 		form.submit = onSubmit;

@@ -26,23 +26,26 @@
 								'content2',
 								'content3'
 								], 
-					targetEl, elDiv, len, i;
+					targetEl, elDiv, len, i, dFrag;
 		//1
 		targetEl = document.getElementById(elId);
 		//2
 		targetEl.innerHTML = '';
 		//3
-		len = divContent.length;
+		dFrag = document.createDocumentFragment();
 		//4
+		len = divContent.length;
+		//5
 		for(i = 0; i < len; i++){
 			elDiv = document.createElement('div');
 			elDiv.innerText = divContent[i];
-			targetEl.appendChild(elDiv);
+			dFrag.appendChild(elDiv);
 			// console.log(elDiv);
 		}
+		// console.log(dFrag)
 
-
-
+		//6
+		targetEl.appendChild(dFrag);
 	</script>
 </body>
 </html>

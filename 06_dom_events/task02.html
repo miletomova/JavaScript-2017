@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task</title>
+</head>
+<body>
+	<img src="happy.jpg">
+	<button id="btn">Click Me</button>
+	<script type="text/javascript">
+		var btn = document.getElementById('btn');
+		btn.onclick = function(){
+			var image = document.getElementsByTagName('img')[0];
+				
+		console.log(image.getAttribute('src'));
+				if (image.getAttribute('src') == 'happy.jpg') {
+				image.src = 'sad.jpg';
+			}
+
+		};
+	</script>
+</body>
+</html>

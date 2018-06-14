@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name="check" id="check">
+	<script type="text/javascript">
+		var target = document.getElementsByTagName('input')[0];
+		target.addEventListener('input', function(){
+			if(isNaN(target.value)){
+				//console.log('nan');
+				target.style.background = '#EF2929';
+			} else {
+				target.style.background = '#FFF';
+			}
+			
+		});
+		
+	</script>
+</body>
+</html>
