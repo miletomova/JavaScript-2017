@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="prev"></div>
+	<div class="demo" id="attr">
+		<p id="test">
+			<a href=""></a>
+		</p>
+	</div>
+	<input type="text" name="demo" value="demo">
+	<script type="text/javascript">
+		// var divEl = $('div');
+		var divEl = $('.demo');
+		var pEl = $('#test');
+		//console.log(divEl.attr('class'));
+		//console.log(divEl.attr('id'));
+		// console.log(pEl[0].id);
+
+		console.log($('input').val());
+		$('input').val('test');
+		console.log($('input').val());
+
+		var nextEl = $('div').next();
+		var prevEl = $('div').prev();
+		console.log(nextEl);
+		console.log(prevEl);
+
+		var parentSelector = $('div').parent();
+		console.log(parentSelector);
+
+		var parentA = $('a').parent();
+		var parentDiv = $('a').parents('div');
+
+		console.log(parentA);
+		console.log(parentDiv);
+	</script>
+</body>
+</html>

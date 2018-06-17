@@ -6,26 +6,28 @@
 </head>
 <body>
 	<div>
-		<p>Paragraph 1</p>
-		<p>Paragraph 2</p>
-		<p>Paragraph 3</p>
-		<p>Paragraph 4</p>
-		<p>Paragraph 5</p>
+		<p id="p-1">Paragraph 1</p>
+		<p id="p-2">Paragraph 2</p>
+		<p id="p-3">Paragraph 3</p>
+		<p id="p-4">Paragraph 4</p>
+		<p id="p-5">Paragraph 5</p>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript">
 	//any p
-		$('p').on('click', function(){
-			alert('P has been clicked');
-		});
+		// $('p').on('click', function(){
+		// 	alert('P has been clicked');
+		// });
 	//this p has been clicked
 		// $('p').on('click', function(){			
 		// 		alert('P - '+ $(this).html() +' has been clicked');
 		// 	});
 		//use 
-		// $('p').on('click', function(){			
-		// 		$(this).css('background', '#F43030');
-		// 	});
+		$('p').on('click', function(){			
+				// $('p').css('background', '#F43030');
+				// $(this).css('background', '#F43030');
+				console.log($(this).attr('id'));
+			});
 
 	</script>
 </body>

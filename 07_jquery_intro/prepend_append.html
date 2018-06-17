@@ -7,8 +7,11 @@
 <body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript">
-		$('body').prepend('<h1>The Title</h1>')
-		$('body').prepend('<h1>The Title 2</h1>')
+	var hash1 = $('<h1>');
+	console.log(hash1);
+		$('body').prepend('<h1>The Title</h1>');
+		$('body').prepend('<h1>The Title 2</h1>');
+		hash1.appendTo('body');
 	</script>
 </body>
 </html>
