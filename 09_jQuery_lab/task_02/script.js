@@ -5,7 +5,10 @@ $('#add').on('click', function(e){
   var inputEl = $('<input>');
   inputEl.attr({
     'type':'text',
-    'name':'name-'+participant
+    'name':'name-'+participant,
+    'id':'name-'+particant,
+    'class':'class-name',
+    'placeholder': 'Enter name ...'
     });
   $('#add').parent('p').after(inputEl);
   console.log(participant);
