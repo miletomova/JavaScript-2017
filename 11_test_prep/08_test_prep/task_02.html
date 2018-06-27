@@ -6,5 +6,28 @@
 </head>
 <body>
 	<div id="wrapper"></div>	
+	<script type="text/javascript">
+	var aEl, liEl, ulEl, target, i;
+
+	target = document.getElementById('wrapper');
+	ulEl = document.createElement('ul');
+
+	for(i = 0; i < 44; i++ ){
+		liEl = document.createElement('li');
+		aEl = document.createElement('a');
+		aEl.setAttribute('href', 'link'+ i);
+		aEl.textContent = 'link' + (i + 1);
+
+		liEl.appendChild(aEl);
+		ulEl.appendChild(liEl);
+	}
+
+	target.appendChild(ulEl);
+
+
+
+		// меню - 4 li, 
+		// във всяко от тях има по един a - елемент, с href и текст, указващ накъде води съответния линк.
+	</script>
 </body>
 </html>
